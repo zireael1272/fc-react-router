@@ -25,11 +25,8 @@ function Header() {
         <button className={styles.loginBtn}>Login</button>
       </div>
       <nav className={styles.navigation}>
-        <NavLink to="/" end className={linkActive}>
+        <NavLink to="/" className={linkActive}>
           Home
-        </NavLink>
-        <NavLink to="/carts" className={linkActive}>
-          Carts
         </NavLink>
         <NavLink to="/users" className={linkActive}>
           Users
