@@ -12,23 +12,26 @@ function BasePage() {
 }
 
 function Header() {
+  const linkActive = ({ isActive }) =>
+    `${styles.link} ${isActive ? styles.active : ""}`;
+
   return (
     <header>
       <div className={styles.header}>
         <button className={styles.burgerBtn}>
-          <i class="fa-solid fa-bars"></i>
+          <i className="fa-solid fa-bars"></i>
         </button>
         <h1 className={styles.headerTitle}>Carts Product Manager</h1>
         <button className={styles.loginBtn}>Login</button>
       </div>
       <nav className={styles.navigation}>
-        <NavLink to="/" className={styles.link}>
+        <NavLink to="/" end className={linkActive}>
           Home
         </NavLink>
-        <NavLink to="/carts" className={styles.link}>
+        <NavLink to="/carts" className={linkActive}>
           Carts
         </NavLink>
-        <NavLink to="/users" className={styles.link}>
+        <NavLink to="/users" className={linkActive}>
           Users
         </NavLink>
       </nav>
