@@ -1,0 +1,32 @@
+.baseInfo {
+  text-align: center;
+}
+
+.userImg {
+  max-width: 80px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px;
+}
+
+.link {
+  padding: 12px 32px;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid transparent;
+}
+
+.link:hover {
+  background-color: rgb(69, 168, 255);
+}
+
+.link.active {
+  border-bottom: 2px solid var(--main-color);
+}
