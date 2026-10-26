@@ -34,6 +34,11 @@ function UserCarts() {
   return (
     <>
       {error && <div>!!!ERROR!!! {JSON.stringify(error)}</div>}
+      {!isFetching && !error && carts.length === 0 && (
+        <p className={styles.emptyMessage}>
+          This user does not have an active shopping cart
+        </p>
+      )}
       {isFetching && <div>Loading. Please waite...</div>}
 
       {carts.map((cart) => (
